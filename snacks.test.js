@@ -1,9 +1,8 @@
+
 // 🏆 Snack 1
 // Creare un test che verifichi la seguente descrizione:
-const getInitials = (fullName) => {
-    const [name, surname] = fullName.split(" ");
-    return `${name.charAt(0)} ${surname.charAt(0)}`
-}
+const { getInitials } = require("./snack")
+
 // 👉 "La funzione getInitials restituisce le iniziali di un nome completo."
 test("La funzione getInitials restituisce le iniziali di un nome completo.", () => {
     expect(getInitials("Giovanni Storti")).toBe("G S")
