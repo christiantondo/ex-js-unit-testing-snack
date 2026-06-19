@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, isPalindrome } = require("./snack")
+const { getInitials, createSlug, average, isPalindrome, findPostById } = require("./snack")
 
 // 🏆 Snack 1
 // Creare un test che verifichi la seguente descrizione:
@@ -51,11 +51,16 @@ test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido
 
 // 🏆 Snack 7
 // Crea un array di oggetti posts, in cui ogni oggetto ha le proprietà id, title e slug.
-
+const posts = [
+    { id: 1, title: "Dark Souls Platinum Guide", slug: "dark-souls-platinum-guide" },
+    { id: 2, title: "Bloodborne Platinum Guide", slug: "bloodborne-platinum-guide" }
+]
 // Creare un test che verifichi le seguenti descrizioni:
 
 // 👉 "La funzione findPostById restituisce il post corretto dato l’array di post e l’id"
-
+test("La funzione findPostById restituisce il post corretto dato l’array di post e l’id", () => {
+    expect(findPostById(posts, 1)).toEqual({ id: 1, title: "Dark Souls Platinum Guide", slug: "dark-souls-platinum-guide" })
+})
 
 // Creare uno o più test aggiuntivi che controllino che la struttura dati passati sia conforme (ogni post ha le proprietà id, title e slug, viene passato un id numerico).
 

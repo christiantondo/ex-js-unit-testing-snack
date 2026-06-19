@@ -24,9 +24,14 @@ const isPalindrome = (string) => {
     return cleanString === reversedString;
 };
 
+const findPostById = (arr, id) => {
+    return arr.find(p => p.id === id);
+};
+
 module.exports = {
     getInitials,
     createSlug,
     average,
-    isPalindrome
+    isPalindrome,
+    findPostById
 }
