@@ -29,15 +29,21 @@ test("La funzione createSlug sostituisce gli spazi con -.", () => {
     expect(createSlug("Oggi mi sento BENE")).toBe("oggi-mi-sento-bene")
 });
 
-
 // 📌 Esempi:
-
 // createSlug("Questo è un test") → "questo-e-un-test"
+
 // 🏆 Snack 5
 // Creare un test che verifichi la seguente descrizione:
-
+const isPalindrome = (string) => {
+    const cleanString = string.toLowerCase().replaceAll(" ", "");
+    const reversedString = cleanString.split("").reverse().join("");
+    return cleanString === reversedString;
+}
 // 👉 "La funzione isPalindrome verifica se una stringa è un palindromo."
-
+test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
+    expect(isPalindrome("Amo ridere di Roma")).toBeTruthy()
+    expect(isPalindrome("Oggi fa davvero caldo")).toBeFalsy()
+});
 
 
 // 📌 Nota: una stringa palindroma è una sequenza di caratteri che si legge uguale sia da sinistra a destra che da destra a sinistra.
