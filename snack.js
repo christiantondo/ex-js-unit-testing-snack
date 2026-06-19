@@ -13,8 +13,15 @@ const average = (arr) => {
     return sum / arr.length
 };
 
+const isPalindrome = (string) => {
+    const cleanString = string.toLowerCase().replaceAll(" ", "");
+    const reversedString = cleanString.split("").reverse().join("");
+    return cleanString === reversedString;
+};
+
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    isPalindrome
 }

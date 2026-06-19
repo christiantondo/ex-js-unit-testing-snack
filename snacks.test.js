@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average } = require("./snack")
+const { getInitials, createSlug, average, isPalindrome } = require("./snack")
 
 // 🏆 Snack 1
 // Creare un test che verifichi la seguente descrizione:
@@ -23,7 +23,6 @@ test("La funzione average calcola la media aritmetica di un array di numeri.", (
 
 // 🏆 Snack 4
 // Creare un test che verifichi la seguente descrizione:
-
 // 👉 "La funzione createSlug sostituisce gli spazi con -."
 test("La funzione createSlug sostituisce gli spazi con -.", () => {
     expect(createSlug("Oggi mi sento BENE")).toBe("oggi-mi-sento-bene")
@@ -34,11 +33,6 @@ test("La funzione createSlug sostituisce gli spazi con -.", () => {
 
 // 🏆 Snack 5
 // Creare un test che verifichi la seguente descrizione:
-const isPalindrome = (string) => {
-    const cleanString = string.toLowerCase().replaceAll(" ", "");
-    const reversedString = cleanString.split("").reverse().join("");
-    return cleanString === reversedString;
-}
 // 👉 "La funzione isPalindrome verifica se una stringa è un palindromo."
 test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
     expect(isPalindrome("Amo ridere di Roma")).toBeTruthy()
