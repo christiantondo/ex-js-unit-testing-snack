@@ -16,8 +16,17 @@ test("La funzione createSlug restituisce una stringa in lowercase.", () => {
 
 // 🏆 Snack 3
 // Creare un test che verifichi la seguente descrizione:
-
+const average = (arr) => {
+    let sum = 0;
+    arr.forEach(n => {
+        sum += n;
+    });
+    return sum / arr.length
+};
 // 👉 "La funzione average calcola la media aritmetica di un array di numeri."
+test("La funzione average calcola la media aritmetica di un array di numeri.", () => {
+    expect(average([30, 60, 10, 20, 40])).toBe(32);
+});
 
 // 🏆 Snack 4
 // Creare un test che verifichi la seguente descrizione:
